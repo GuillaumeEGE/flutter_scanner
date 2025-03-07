@@ -73,7 +73,7 @@ public class ImageProcessor extends Handler {
     private Point[] mPreviewPoints;
     private ResultPoint[] qrResultPoints;
     private int numOfSquares = 0;
-    private int numOfRectangles = 10;
+    private int numOfRectangles = 5;
     private boolean noGrayscale;
 
     public ImageProcessor(Looper looper, Handler uiHandler, OpenNoteCameraView mainActivity, Context context) {
