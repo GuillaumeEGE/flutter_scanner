@@ -105,7 +105,7 @@
   }
   if (!device) return;
 
-  self.imageDetectionConfidence = 0.0;
+  self.imageDetectionConfidence = 0.5;
 
   AVCaptureSession *session = [[AVCaptureSession alloc] init];
   self.captureSession = session;
