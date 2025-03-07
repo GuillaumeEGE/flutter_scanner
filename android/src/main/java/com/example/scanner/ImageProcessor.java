@@ -66,8 +66,8 @@ public class ImageProcessor extends Handler {
     private boolean mBugRotate;
     private boolean colorMode = false;
     private boolean filterMode = true;
-    private double colorGain = 1; // contrast
-    private double colorBias = 10; // bright
+    private double colorGain = 1.5; // contrast
+    private double colorBias = 5; // bright
     private int colorThresh = 115; // threshold
     private Size mPreviewSize;
     private Point[] mPreviewPoints;
@@ -521,7 +521,7 @@ public class ImageProcessor extends Handler {
         Imgproc.resize(src, resizedImage, size);
         Imgproc.cvtColor(resizedImage, grayImage, Imgproc.COLOR_RGBA2GRAY, 4);
         Imgproc.GaussianBlur(grayImage, grayImage, new Size(5, 5), 0);
-        Imgproc.Canny(grayImage, cannedImage, 80, 100, 3, false);
+        Imgproc.Canny(grayImage, cannedImage, 50, 70, 3, false);
 
         ArrayList<MatOfPoint> contours = new ArrayList<MatOfPoint>();
         Mat hierarchy = new Mat();
