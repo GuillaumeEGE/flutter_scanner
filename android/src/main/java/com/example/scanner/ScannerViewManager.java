@@ -100,11 +100,12 @@ uiThreadHandler.postAtFrontOfQueue(runnable );
 
         view.setDocumentAnimation(documentAnimation);
 
-        String overlayColor;
+        /*String overlayColor;
         if(params.containsKey("overlayColor")){
             overlayColor = (String ) params.get("overlayColor");
             view.setOverlayColor(overlayColor);
-        }
+        }*/
+            view.setOverlayColor("#19AA3A");
 
         int detectionCountBeforeCapture;
         if(params.containsKey("detectionCountBeforeCapture")){
