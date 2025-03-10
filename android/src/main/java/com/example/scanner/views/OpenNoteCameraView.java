@@ -993,7 +993,7 @@ public class OpenNoteCameraView extends JavaCameraView implements PictureCallbac
     public int parsedOverlayColor() {
         {
             if(this.overlayColor == null){
-return Color.argb(255, 25, 170, 58); // #19AA3A
+return Color.argb(120, 25, 170, 58); // #19AA3A
             }
             Pattern c = Pattern.compile("rgba *\\( *([0-9]+), *([0-9]+), *([0-9]+), *([0-9]\\.?[0-9]?)*\\)");
             Matcher m = c.matcher(this.overlayColor);
@@ -1003,7 +1003,7 @@ return Color.argb(255, 25, 170, 58); // #19AA3A
                         Integer.valueOf(m.group(2)), Integer.valueOf(m.group(3)));
             }
 
-return Color.argb(255, 25, 170, 58); // #19AA3A
+return Color.argb(120, 25, 170, 58); // #19AA3A
 
         }
     }
