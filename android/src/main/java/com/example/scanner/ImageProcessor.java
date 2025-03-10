@@ -521,14 +521,14 @@ public class ImageProcessor extends Handler {
         Imgproc.resize(src, resizedImage, size);
         Imgproc.cvtColor(resizedImage, grayImage, Imgproc.COLOR_RGBA2GRAY, 4);
         Imgproc.GaussianBlur(grayImage, grayImage, new Size(5, 5), 0);
-Imgproc.adaptiveThreshold(
+/*Imgproc.adaptiveThreshold(
     grayImage, 
     grayImage, 
     255, 
     Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, 
     Imgproc.THRESH_BINARY, 
     11, 2
-);
+);*/
         
         Imgproc.Canny(grayImage, cannedImage, 30, 50, 3, false);
 
