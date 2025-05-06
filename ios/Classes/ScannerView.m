@@ -7,7 +7,7 @@
   self = [super init];
 
   self.detectionRefreshRateInMS = 50;
-  self.overlayColor = [UIColor colorWithRed: 1.00 green: 0.00 blue: 0.00 alpha: 0.50];
+self.overlayColor = [UIColor colorWithRed:0.0 green:1.0 blue:0.0 alpha:0.5];
   self.enableTorch = false;
   self.useFrontCam = false;
   self.useBase64 = false;
