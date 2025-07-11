@@ -78,7 +78,6 @@ binding.getActivity()
                                 pluginBinding.getBinaryMessenger(),
                                 binding.getActivity().getApplication(),
                                 lifecycle,
-                                null,
                                 binding.getActivity().hashCode(), binding.getActivity(), methodChannel));
     }
 
