@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.platform.PlatformView;
 
 public class ScannerViewManager implements PlatformView {
