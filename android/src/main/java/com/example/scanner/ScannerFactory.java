@@ -13,18 +13,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.MethodChannel;
-import io.flutter.plugin.common.PluginRegistry;
 import io.flutter.plugin.common.StandardMessageCodec;
 import io.flutter.plugin.platform.PlatformView;
 import io.flutter.plugin.platform.PlatformViewFactory;
 
+@SuppressWarnings("unused")
 public class ScannerFactory extends PlatformViewFactory {
     private final AtomicInteger mActivityState;
     private final BinaryMessenger binaryMessenger;
     private final Application application;
     private final int activityHashCode;
     private final Lifecycle lifecycle;
-    private final PluginRegistry.Registrar registrar; // V1 embedding only.
     private final Activity activity;
     private final MethodChannel channel;
     ScannerFactory(
@@ -32,7 +31,6 @@ public class ScannerFactory extends PlatformViewFactory {
             BinaryMessenger binaryMessenger,
             Application application,
             Lifecycle lifecycle,
-            PluginRegistry.Registrar registrar,
             int activityHashCode,Activity activity,
             MethodChannel channel) {
         super(StandardMessageCodec.INSTANCE);
@@ -41,7 +39,6 @@ public class ScannerFactory extends PlatformViewFactory {
         this.application = application;
         this.activityHashCode = activityHashCode;
         this.lifecycle = lifecycle;
-        this.registrar = registrar;
         this.activity = activity;
         this.channel = channel;
     }
